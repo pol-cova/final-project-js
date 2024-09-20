@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="bg-gray-800 p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="/" class="text-white text-2xl font-bold">TravelBloom</a>
+                <div class="space-x-4">
+                    <a href="/" class="text-white">Home</a>
+                    <a href="about.html" class="text-white">About Us</a>
+                    <a href="contact.html" class="text-white">Contact Us</a>
+                </div>
+                <!-- Search form -->
+                <form id="searchForm" class="flex items-center space-x-2">
+                    <input id="searchInput" type="text" placeholder="Search for recommendations" class="px-2 py-1 rounded-lg">
+                    <button type="button" id="searchBtn" class="bg-blue-500 text-white px-4 py-1 rounded-lg">Search</button>
+                    <button type="reset" id="clearBtn" class="bg-gray-500 text-white px-4 py-1 rounded-lg">Clear</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Page Content -->
+    <section class="relative h-screen bg-cover bg-center" style="background-image: url('./mountains.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+            <h1 class="text-5xl font-bold">Welcome to TravelBloom</h1>
+            <p class="mt-4 text-xl">Your one-stop solution for personalized travel recommendations.</p>
+            <!-- Social media icons -->
+            <div class="flex space-x-4 mt-6">
+                <a href="https://facebook.com" class="text-blue-600"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com" class="text-blue-300"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://instagram.com" class="text-pink-500"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+
+            <div id="recommendationResults" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"></div>
+
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
